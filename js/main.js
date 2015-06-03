@@ -3,33 +3,14 @@
  */
 $(document).ready(function(){
 
-    //Navigation Menu Slider
-    $('#nav-expander').on('click',function(e){
-        e.preventDefault();
-        $('body').toggleClass('nav-expanded');
+    //Navigation Menu Toggle
+    $('li a').hover(function(){
+            var $menuIcon = $(this).children("i");
+             $menuIcon.removeClass("fa-circle-o");
+             $menuIcon.addClass("fa-dot-circle-o");
+        },function(){
+            var $menuIcon = $(this).children("i");
+            $menuIcon.removeClass("fa-dot-circle-o");
+            $menuIcon.addClass("fa-circle-o");
     });
-    $('#nav-close').on('click',function(e){
-        e.preventDefault();
-        $('body').removeClass('nav-expanded');
-    });
-
-
-    // Initialize navgoco with default options
-    $(".main-menu").navgoco({
-        caret: '<span class="caret"></span>',
-        accordion: false,
-        openClass: 'open',
-        save: true,
-        cookie: {
-            name: 'navgoco',
-            expires: false,
-            path: '/'
-        },
-        slide: {
-            duration: 300,
-            easing: 'swing'
-        }
-    });
-
-
 });
