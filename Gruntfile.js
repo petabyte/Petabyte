@@ -59,9 +59,8 @@ module.exports = function(grunt){
       dist:{
         files:[
           {expand:true, src:['./*.html'],dest:'./dist'},
-          {expand:true, src:['./js/*.js'],dest:'./dist'},
-          {expand:true, src:['./css/**'],dest:'./dist'},
-          {expand:true, src:['./fonts/**'],dest:'./dist'}
+          {expand:true, src:['./js/**'],dest:'./dist'},
+          {expand:true, src:['./css/**'],dest:'./dist'}
         ]
       }
     },
