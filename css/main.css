@@ -6,18 +6,18 @@
 
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    background-color: #DAD7C7;
+    background-color: #C4D1D9;
 }
 .navbar-inverse .navbar-nav>li>a {
-    color: #000000;
+    color: #83B8D9;
 }
 
 .navbar-inverse .navbar-brand {
-    color: #A61C1C;
+    color: #83B8D9;
 }
 .navbar{
     color:#FFFFFF;
-    background-color: #58838C;
+    background-color: #51575A;
 }
 
 .slide-image {

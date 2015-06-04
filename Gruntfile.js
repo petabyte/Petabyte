@@ -49,9 +49,19 @@ module.exports = function(grunt){
           'css/bootstrap/css':'bootstrap/dist/css',
           'css/font-awesome/css':'font-awesome/css',
           'css/bootstrap/fonts':'bootstrap/dist/fonts',
-          'css/font-awesome/fonts':'font-awesome/fonts',
-          'js/bootstrap':'bootstrap/dist/js',
-          'js/jquery':'jquery/dist'
+          'css/font-awesome/fonts':'font-awesome/fonts'
+        }
+      },
+      libsBootStrap:{
+        options:{ destPrefix:'js/lib'},
+        files:{
+          '':'bootstrap/dist/js/*min*.js'
+        }
+      },
+      libsJQuery:{
+        options:{ destPrefix:'js/lib'},
+        files:{
+          '':'jquery/dist/*min*.js'
         }
       }
     },
@@ -69,7 +79,7 @@ module.exports = function(grunt){
     }
   });
 
-   grunt.registerTask("default", ["jasmine_node","bowercopy:dev","watch"]);
+   grunt.registerTask("default", ["jasmine_node","bowercopy:dev","bowercopy:libsBootStrap","bowercopy:libsJQuery","watch"]);
    grunt.registerTask("dist",["jshint","clean:dist","copy:dist"]);
 }
   
