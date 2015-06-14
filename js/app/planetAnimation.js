@@ -50,19 +50,21 @@ $(document).ready(function() {
 
     var redraw = function () {
         ctx.save();
-        circle(colors[0], planets[0].radius, planets[0].distance);
-        // rotate + move along x
-        ctx.rotate(i / 100);
-        ctx.translate(100, 0);
-        circle(colors[1], planets[1].radius * planetFactor, planets[1].distance * planetFactor);
-        circle(colors[2], planets[2].radius * planetFactor, planets[2].distance * planetFactor);
-        circle(colors[3], planets[3].radius * planetFactor, planets[3].distance * planetFactor);
-        circle(colors[4], planets[4].radius * planetFactor, planets[4].distance * planetFactor);
-        circle(colors[1], planets[5].radius * planetFactor, planets[5].distance * planetFactor);
-        circle(colors[2], planets[6].radius * planetFactor, planets[6].distance * planetFactor);
-        circle(colors[3], planets[7].radius * planetFactor, planets[7].distance * planetFactor);
-        circle(colors[4], planets[8].radius * planetFactor, planets[8].distance * planetFactor);
-        circle(colors[1], planets[9].radius * planetFactor, planets[9].distance * planetFactor);
+        if(planets.length > 0){
+            circle(colors[0], planets[0].radius, planets[0].distance);
+            // rotate + move along x
+            ctx.rotate(i / 100);
+            ctx.translate(100, 0);
+            circle(colors[1], planets[1].radius * planetFactor, planets[1].distance * planetFactor);
+            circle(colors[2], planets[2].radius * planetFactor, planets[2].distance * planetFactor);
+            circle(colors[3], planets[3].radius * planetFactor, planets[3].distance * planetFactor);
+            circle(colors[4], planets[4].radius * planetFactor, planets[4].distance * planetFactor);
+            circle(colors[1], planets[5].radius * planetFactor, planets[5].distance * planetFactor);
+            circle(colors[2], planets[6].radius * planetFactor, planets[6].distance * planetFactor);
+            circle(colors[3], planets[7].radius * planetFactor, planets[7].distance * planetFactor);
+            circle(colors[4], planets[8].radius * planetFactor, planets[8].distance * planetFactor);
+            circle(colors[1], planets[9].radius * planetFactor, planets[9].distance * planetFactor);
+        }
         ctx.restore();
         i++;
         window.requestAnimationFrame(redraw);
