@@ -3,7 +3,7 @@
  */
 $(document).ready(function(){
     var color = d3.scale.quantize()
-        .range(["#156b87", "#876315", "#543510", "#872815"]);
+        .range(["#156b87", "#876315", "#543510", "#872815","#CCB447"]);
 
     var size = 960;
 

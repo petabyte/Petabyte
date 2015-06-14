@@ -64,6 +64,12 @@ module.exports = function(grunt){
           '':'jquery/dist/*min*.js'
         }
       },
+      libsJQueryCSV:{
+        options:{ destPrefix:'js/lib'},
+        files:{
+          '':'jquery-csv/src/*min*.js'
+        }
+      },
       libsD3:{
         options:{ destPrefix:'js/lib'},
         files:{
@@ -75,6 +81,7 @@ module.exports = function(grunt){
       dist:{
         files:[
           {expand:true, src:['./*.html'],dest:'./dist'},
+          {expand:true, src:['./*.csv'],dest:'./dist'},
           {expand:true, src:['./js/**'],dest:'./dist'},
           {expand:true, src:['./css/**'],dest:'./dist'},
           {expand:true, src:['./img/**'],dest:'./dist'},
@@ -91,6 +98,7 @@ module.exports = function(grunt){
    grunt.registerTask("default", ["jasmine_node","bowercopy:dev",
      "bowercopy:libsBootStrap",
      "bowercopy:libsJQuery",
+     "bowercopy:libsJQueryCSV",
      "bowercopy:libsD3","watch"]);
    grunt.registerTask("dist",["jshint","clean:dist","copy:dist"]);
 }
