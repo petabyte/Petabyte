@@ -63,6 +63,12 @@ module.exports = function(grunt){
         files:{
           '':'jquery/dist/*min*.js'
         }
+      },
+      libsD3:{
+        options:{ destPrefix:'js/lib'},
+        files:{
+          '':'d3/*min*.js'
+        }
       }
     },
     copy:{
@@ -70,16 +76,22 @@ module.exports = function(grunt){
         files:[
           {expand:true, src:['./*.html'],dest:'./dist'},
           {expand:true, src:['./js/**'],dest:'./dist'},
-          {expand:true, src:['./css/**'],dest:'./dist'}
+          {expand:true, src:['./css/**'],dest:'./dist'},
+          {expand:true, src:['./img/**'],dest:'./dist'},
+          {expand:true, src:['./video/**'],dest:'./dist'},
+          {expand:true, src:['./audio/**'],dest:'./dist'}
         ]
       }
     },
     clean:{
-      dist:['./dist/*.html','./dist/css','./dist/js']
+      dist:['./dist/*.html','./dist/css','./dist/js','./dist/img']
     }
   });
 
-   grunt.registerTask("default", ["jasmine_node","bowercopy:dev","bowercopy:libsBootStrap","bowercopy:libsJQuery","watch"]);
+   grunt.registerTask("default", ["jasmine_node","bowercopy:dev",
+     "bowercopy:libsBootStrap",
+     "bowercopy:libsJQuery",
+     "bowercopy:libsD3","watch"]);
    grunt.registerTask("dist",["jshint","clean:dist","copy:dist"]);
 }
   

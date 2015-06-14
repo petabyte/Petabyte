@@ -5,19 +5,21 @@
  */
 
 body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    background-color: #DAD7C7;
+    padding-top: 90px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    background-color: #F7F3E9;
 }
 .navbar-inverse .navbar-nav>li>a {
-    color: #000000;
+    padding-top:20px;
+    color: #ACF0F2;
 }
 
 .navbar-inverse .navbar-brand {
-    color: #A61C1C;
+    padding-top:20px;
+    color: #ACF0F2;
 }
 .navbar{
     color:#FFFFFF;
-    background-color: #58838C;
+    background-color: #193441;
 }
 
 .slide-image {
