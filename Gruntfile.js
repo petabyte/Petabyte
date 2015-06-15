@@ -29,7 +29,7 @@ module.exports = function(grunt){
       options: { jshintrc: ".jshintrc" },
       all: {
         src: [
-          "/js/*.js","!Grunt*.js","!*spec.js"
+          "/js/app/**.js","!Grunt*.js","!*spec.js"
         ]
       }
     },
@@ -83,6 +83,7 @@ module.exports = function(grunt){
           {expand:true, src:['./*.html'],dest:'./dist'},
           {expand:true, src:['./*.csv'],dest:'./dist'},
           {expand:true, src:['./*.json'],dest:'./dist'},
+          {expand:true, src:['./*.pdf'],dest:'./dist'},
           {expand:true, src:['./js/**'],dest:'./dist'},
           {expand:true, src:['./css/**'],dest:'./dist'},
           {expand:true, src:['./img/**'],dest:'./dist'},
