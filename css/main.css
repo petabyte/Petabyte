@@ -21,6 +21,9 @@ body {
     color:#FFFFFF;
     background-color: #193441;
 }
+a.navbar-link {
+    text-decoration: underline;
+}
 
 .embed-container {
     position: relative;

@@ -82,6 +82,7 @@ module.exports = function(grunt){
         files:[
           {expand:true, src:['./*.html'],dest:'./dist'},
           {expand:true, src:['./*.csv'],dest:'./dist'},
+          {expand:true, src:['./*.json'],dest:'./dist'},
           {expand:true, src:['./js/**'],dest:'./dist'},
           {expand:true, src:['./css/**'],dest:'./dist'},
           {expand:true, src:['./img/**'],dest:'./dist'},
