@@ -10,16 +10,8 @@ $(document).ready(function()
         $menuIcon.addClass("fa-dot-circle-o");
     },function(){
         var $menuIcon = $(this).children("i");
-
         $menuIcon.removeClass("fa-dot-circle-o");
         $menuIcon.addClass("fa-circle-o");
-    });
-
-    $('li a').click(function(e){
-        var $menuIcon = $('li a').children("i");
-        $menuIcon.removeClass("fa-circle");
-        var $currentMenuIcon = $(this).children("i");
-        $currentMenuIcon.addClass("fa-circle");
     });
 
 });
