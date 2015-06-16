@@ -3,26 +3,26 @@
  */
 $(document).ready(function()
 {
-    var lastLocation = localStorage.getItem('lastLocation');
-    var $navigation = $('.nav.navbar-nav');
-    var $sideMenu = $('#sidemenu');
-    var $indexPage = $('.caption');
-    var $linkNavigation = $navigation.find('li a');
-    var $linkSideMenu = $sideMenu.find('a');
-    var $indexPageNavigation = $indexPage.find('h4 a');
+    var lastLocation = localStorage.getItem("lastLocation");
+    var $navigation = $(".nav.navbar-nav");
+    var $sideMenu = $("#sidemenu");
+    var $indexPage = $(".caption");
+    var $linkNavigation = $navigation.find("li a");
+    var $linkSideMenu = $sideMenu.find("a");
+    var $indexPageNavigation = $indexPage.find("h4 a");
 
     var setLastLocationTopNav = function(element){
         var $currentMenuIcon = element.children("i");
         $currentMenuIcon.addClass("fa-circle");
-    }
+    };
 
     var setLastLocationSideMenu = function(element){
         element.addClass("active");
-    }
+    };
 
     if (lastLocation){
-        var $currentTopNav = $linkNavigation.filter('[href=\''+lastLocation+'\']');
-        var $currentSideMenu = $linkSideMenu.filter('[href=\''+lastLocation+'\']');
+        var $currentTopNav = $linkNavigation.filter("[href=\""+lastLocation+"\"]");
+        var $currentSideMenu = $linkSideMenu.filter("[href=\""+lastLocation+"\"]");
         setLastLocationTopNav($currentTopNav);
         setLastLocationSideMenu($currentSideMenu);
     }
@@ -39,22 +39,22 @@ $(document).ready(function()
         $menuIcon.addClass("fa-circle-o");
     });
 
-    $linkSideMenu.click(function (e){
+    $linkSideMenu.click(function (){
         $(this).removeClass("active");
         setLastLocationSideMenu($(this));
-        localStorage.setItem('lastLocation',$(this).attr("href"));
+        localStorage.setItem("lastLocation",$(this).attr("href"));
 
     });
 
-    $linkNavigation.click(function(e){
+    $linkNavigation.click(function(){
         var $menuIcon = $(this).children("i");
         $menuIcon.removeClass("fa-circle");
-        setLastLocationTopNav($(this))
-        localStorage.setItem('lastLocation',$(this).attr("href"));
+        setLastLocationTopNav($(this));
+        localStorage.setItem("lastLocation",$(this).attr("href"));
     });
 
-    $indexPageNavigation.click(function(e){
-        localStorage.setItem('lastLocation',$(this).attr("href"));
+    $indexPageNavigation.click(function(){
+        localStorage.setItem("lastLocation",$(this).attr("href"));
     });
 
 });

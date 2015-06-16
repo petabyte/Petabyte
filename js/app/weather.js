@@ -2,11 +2,11 @@
  * Created by George on 6/15/2015.
  */
 $(document).ready(function(){
-    var currentCity = 'Eagan';
-    var $whichCity = $('#whichcity');
+    var currentCity = "Eagan";
+    var $whichCity = $("#whichcity");
     var geoCoder = new google.maps.Geocoder();
     function howsTheWeather(temp, description) {
-        var $weatherToday = $('#weatherToday');
+        var $weatherToday = $("#weatherToday");
         $weatherToday.empty();
         if (temp >= 60 && temp <= 80)
         {
@@ -29,20 +29,20 @@ $(document).ready(function(){
         }
     }
     function cantFindThatCity(message) {
-        var $weatherToday = $('#weatherToday');
+        var $weatherToday = $("#weatherToday");
         $weatherToday.empty();
         var $cityNotFound = $("<div>" + message + ".<i class=\"fa fa-frown-o fa-2x\"></i></div>");
         $weatherToday.append($cityNotFound);
-    };
+    }
     function convertKelvinToFarenheit(degreeKelvin) {
         return Math.round((9 * (degreeKelvin - 273) / 5) + 32);
     }
     function getWeather(city) {
-        var $button1 = $('#button1');
-        $button1.addClass('btn-success');
-        $button1.find('.fa').addClass('fa-spinner fa-spin');
+        var $button1 = $("#button1");
+        $button1.addClass("btn-success");
+        $button1.find(".fa").addClass("fa-spinner fa-spin");
         if(city) {
-            $.getJSON('http://api.openweathermap.org/data/2.5/weather?q='+ city,'{}').done(function(data){
+            $.getJSON("http://api.openweathermap.org/data/2.5/weather?q="+ city,"{}").done(function(data){
                 if(data)
                 {
                     var message = data.message;
@@ -59,37 +59,37 @@ $(document).ready(function(){
                     }
                 }
             }).always(function(){
-                $button1.removeClass('btn-success');
-                $button1.find('.fa').removeClass('fa-spinner fa-spin');
+                $button1.removeClass("btn-success");
+                $button1.find(".fa").removeClass("fa-spinner fa-spin");
             });
         }else{
-            $button1.removeClass('btn-success');
-            $button1.find('.fa').removeClass('fa-spinner fa-spin');
+            $button1.removeClass("btn-success");
+            $button1.find(".fa").removeClass("fa-spinner fa-spin");
         }
     }
     function decodeLatLang(lat,lng){
         var latlng = new google.maps.LatLng(lat, lng);
-        geoCoder.geocode({'latLng': latlng}, function(results, status) {
-            var state = '';
-            var city = '';
-            if (status == google.maps.GeocoderStatus.OK) {
+        geoCoder.geocode({"latLng": latlng}, function(results, status) {
+            var state = "";
+            var city = "";
+            if (status === google.maps.GeocoderStatus.OK) {
                 if (results[1]) {
                     //find country name
                     for (var i=0; i<results[0].address_components.length; i++) {
                         for (var b=0;b<results[0].address_components[i].types.length;b++) {
                             //there are different types that might hold a city admin_area_lvl_1 usually does in come cases looking for sublocality type will be more appropriate
-                            if (results[0].address_components[i].types[b] == "administrative_area_level_1") {
+                            if (results[0].address_components[i].types[b] === "administrative_area_level_1") {
                                 //this is the object you are looking for
                                 state= results[0].address_components[i];
                             }
-                            if (results[0].address_components[i].types[b] == "locality") {
+                            if (results[0].address_components[i].types[b] === "locality") {
                                 //this is the object you are looking for
                                 city= results[0].address_components[i];
                             }
                         }
                     }
                     //city data
-                    currentCity = (city.long_name ? city.long_name:'') + (state.long_name ? ' '+state.long_name:'');
+                    currentCity = (city.long_name ? city.long_name:"") + (state.long_name ? " "+state.long_name:"");
                     $whichCity.val(currentCity);
                 }
             }
@@ -100,7 +100,7 @@ $(document).ready(function(){
         {
             var lat = position.coords.latitude;
             var lng = position.coords.longitude;
-            decodeLatLang(lat, lng)
+            decodeLatLang(lat, lng);
         }
     }
     function getLocation () {
@@ -114,7 +114,7 @@ $(document).ready(function(){
             getWeather(city);
         }
     }
-    $('#button1').on("click",function () {
+    $("#button1").on("click",function () {
         getWeatherForInputCity();
     });
 

@@ -21,13 +21,12 @@ $(document).ready(function(){
         d.radius = +d.radius;
         d.distance = d.distance ? +d.distance : Infinity;
         return d;
-    }
+    };
 
 
     d3.csv("planets.csv", type, function(error, exoplanets) {
         exoplanets.sort(function(a, b) {
-            return isFinite(a.distance) || isFinite(b.distance)
-                ? a.distance - b.distance
+            return isFinite(a.distance) || isFinite(b.distance) ? a.distance - b.distance
                 : 0;
         });
 
@@ -39,15 +38,14 @@ $(document).ready(function(){
             .attr("r", function(d) { return d.r; })
             .attr("cx", function(d) { return d.x; })
             .attr("cy", function(d) { return d.y; })
-            .style("fill", function(d) { return color(d.radius)});
+            .style("fill", function(d) { return color(d.radius);});
 
-        $('svg circle').tipsy({
-            gravity: 'w',
+        $("svg circle").tipsy({
+            gravity: "w",
             html: true,
             title: function() {
                 var d = this.__data__;
-                return d.name
-                + "\nplanet radius: " + d.radius + " EU";
+                return d.name + "\nplanet radius: " + d.radius + " EU";
             }
         });
     });

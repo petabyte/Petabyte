@@ -27,11 +27,7 @@ module.exports = function(grunt){
       */
     jshint: {
       options: { jshintrc: ".jshintrc" },
-      all: {
-        src: [
-          "/js/app/**.js","!Grunt*.js","!*spec.js"
-        ]
-      }
+      all:["js/app/*.js"]
     },
     /**
     * Watch this files
@@ -61,7 +57,7 @@ module.exports = function(grunt){
       libsJQuery:{
         options:{ destPrefix:'js/lib'},
         files:{
-          '':'jquery/dist/*min*.js'
+          '':'jquery/dist/*min*'
         }
       },
       libsJQueryCSV:{

@@ -9,7 +9,7 @@ $(document).ready(function() {
                 window.mozRequestAnimationFrame ||
                 window.oRequestAnimationFrame ||
                 window.msRequestAnimationFrame ||
-                function (/* function FrameRequestCallback */ callback, /* DOMElement Element */ element) {
+                function (/* function FrameRequestCallback */ callback /* DOMElement Element  element */) {
 
                     window.setTimeout(callback, 1000 / 60);
 
@@ -18,8 +18,8 @@ $(document).ready(function() {
         })();
     }
 
-    var canvas = document.getElementById('scene');
-    var ctx = canvas.getContext('2d');
+    var canvas = document.getElementById("scene");
+    var ctx = canvas.getContext("2d");
     var w = canvas.width;
     var h = canvas.height;
 
@@ -33,12 +33,12 @@ $(document).ready(function() {
         ctx.fillText(name,x+r,0);
 
         ctx.fill();
-    }
+    };
     var i = [0, 0, 0, 0, 0, 0, 0, 0, 0];
     var planetFactor = 8;
     var planets=[];
     var colors = ["#CCB447","#156b87", "#876315", "#543510", "#872815"];
-    $.ajax({url: './planets.csv',
+    $.ajax({url: "./planets.csv",
         success: function(data) {
             planets = $.csv.toObjects(data);
 
@@ -48,7 +48,7 @@ $(document).ready(function() {
 
     var redraw = function () {
         ctx.save();
-        ctx.fillStyle='#F7F3E9';
+        ctx.fillStyle="#F7F3E9";
         ctx.fillRect(0, 0, w, h);
         if(planets.length > 0){
             ctx.translate(w / 2, h / 2);
