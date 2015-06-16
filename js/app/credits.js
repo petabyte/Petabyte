@@ -3,7 +3,7 @@
  */
 $(document).ready(function()
 {
-    $.getJSON("./credits.json")
+    $.getJSON("./creditsdata.json")
         .done(function(data){
             var credits = $.parseJSON(JSON.stringify(data));
             addToList(credits);
