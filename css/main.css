@@ -14,6 +14,12 @@ h1,h2,h3,h4{
 .list-group-item{
     font-family: 'Nova Square', cursive;
 }
+
+.breadcrumb{
+    padding: 0;
+    background-color: #F7F3E9;
+    font-family: 'Nova Square', cursive;
+}
 .navbar-inverse .navbar-nav>li>a {
     padding-top:20px;
     color: #ACF0F2;
