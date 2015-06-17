@@ -90,6 +90,7 @@
         "process"    : true,
         "$"          : true,
         "localStorage": true,
+        "location": true,
         "google"      :true,
         "document"      :true,
         "window"      :true,

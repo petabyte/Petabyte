@@ -6,8 +6,10 @@ $(document).ready(function()
     var lastLocation = localStorage.getItem("lastLocation");
     var $navigation = $(".nav.navbar-nav");
     var $sideMenu = $("#sidemenu");
+    var $breadcrumb = $(".breadcrumb");
     var $indexPage = $(".caption");
     var $linkNavigation = $navigation.find("li a");
+    var $linkBreadCrumb = $breadcrumb.first();
     var $linkSideMenu = $sideMenu.find("a");
     var $indexPageNavigation = $indexPage.find("h4 a");
 
@@ -21,10 +23,14 @@ $(document).ready(function()
     };
 
     if (lastLocation){
-        var $currentTopNav = $linkNavigation.filter("[href=\""+lastLocation+"\"]");
-        var $currentSideMenu = $linkSideMenu.filter("[href=\""+lastLocation+"\"]");
-        setLastLocationTopNav($currentTopNav);
-        setLastLocationSideMenu($currentSideMenu);
+        var currentLocation =$("<a>",{href:$(location).attr("href")})[0];
+        var breadCrumbParentLocation = $linkBreadCrumb.find("[href=\""+lastLocation+"\"]");
+        if(currentLocation.pathname.indexOf(lastLocation) !== -1 || breadCrumbParentLocation.length !== 0){
+            var $currentTopNav = $linkNavigation.filter("[href=\""+lastLocation+"\"]");
+            var $currentSideMenu = $linkSideMenu.filter("[href=\""+lastLocation+"\"]");
+            setLastLocationTopNav($currentTopNav);
+            setLastLocationSideMenu($currentSideMenu);
+        }
     }
 
 
