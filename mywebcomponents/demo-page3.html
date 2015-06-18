@@ -1,0 +1,15 @@
+<link rel="import" href="../webcomponent/polymer.html">
+<polymer-element name="demo-page3">
+    <template id="page-template">
+        <h3>Third Web Component</h3>
+        <p>This is a web component</p>
+    </template>
+    <script type="text/javascript">
+        (function(){
+            var template = document._currentScript.ownerDocument.querySelector("#page-template");
+            var content = template.content;
+            var contentDiv = document.querySelector("#content");
+            contentDiv.appendChild(document.importNode(content, true));
+        })();
+    </script>
+</polymer-element>

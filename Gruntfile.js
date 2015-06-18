@@ -71,6 +71,30 @@ module.exports = function(grunt){
         files:{
           '':'d3/*min*.js'
         }
+      },
+      libsWebComponentsjs:{
+        options:{ destPrefix:'js/lib'},
+        files:{
+          '':'webcomponentsjs/*min*.js'
+        }
+      },
+      libsAppRouter:{
+        options:{ destPrefix:'webcomponent'},
+        files:{
+          '':'app-router/app*.*'
+        }
+      },
+      libsPolymer:{
+        options:{ destPrefix:'webcomponent'},
+        files:{
+          '':'polymer/polymer*.*'
+        }
+      },
+      libsPushStateAnchor:{
+        options:{ destPrefix:'webcomponent'},
+        files:{
+          '':'pushstate-anchor/pushstate-anchor*.*'
+        }
       }
     },
     copy:{
@@ -80,6 +104,8 @@ module.exports = function(grunt){
           {expand:true, src:['./*.csv'],dest:'./dist'},
           {expand:true, src:['./*data*.json'],dest:'./dist'},
           {expand:true, src:['./*.pdf'],dest:'./dist'},
+          {expand:true, src:['./webcomponent/**'],dest:'./dist'},
+          {expand:true, src:['./mywebcomponents/**'],dest:'./dist'},
           {expand:true, src:['./js/**'],dest:'./dist'},
           {expand:true, src:['./css/**'],dest:'./dist'},
           {expand:true, src:['./img/**'],dest:'./dist'},
@@ -97,7 +123,12 @@ module.exports = function(grunt){
      "bowercopy:libsBootStrap",
      "bowercopy:libsJQuery",
      "bowercopy:libsJQueryCSV",
-     "bowercopy:libsD3","watch"]);
+     "bowercopy:libsD3",
+     "bowercopy:libsWebComponentsjs",
+     "bowercopy:libsAppRouter",
+     "bowercopy:libsPolymer",
+     "bowercopy:libsPushStateAnchor",
+     "watch"]);
    grunt.registerTask("dist",["jshint","clean:dist","copy:dist"]);
 }
   

@@ -15,6 +15,10 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "bootstrap": "~3.3.4",
-    "font-awesome": "~4.3.0"
+    "font-awesome": "~4.3.0",
+    "webcomponentsjs": "~0.7.5",
+    "app-router": "~2.6.1",
+    "polymer": "~1.0.4",
+    "pushstate-anchor": "~0.3.2"
   }
 }

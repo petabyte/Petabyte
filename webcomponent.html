@@ -18,12 +18,15 @@
     <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet" type="text/css">
+    <link href="webcomponent/app-router.html" rel="import">
+    <link href="webcomponent/pushstate-anchor.html" rel="import">
 
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet">
     <script  src="js/lib/jquery.min.js"></script>
     <script src="js/lib/bootstrap.min.js"></script>
-    <script  src="js/app/main.js"></script>
+    <script src="js/app/main.js"></script>
+    <script src="js/lib/webcomponents.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,9 +35,15 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 
     <![endif]-->
+
 </head>
 
 <body>
+<app-router mode="auto" typecast="auto">
+    <app-route path="page1" import="mywebcomponents/demo-page1.html"></app-route>
+    <app-route path="page2" import="mywebcomponents/demo-page2.html"></app-route>
+    <app-route path="page3" import="mywebcomponents/demo-page3.html"></app-route>
+</app-router>
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -75,8 +84,9 @@
 <div class="container">
 
     <div class="row">
+
         <div class="col-md-3">
-            <div id="sidemenu" class="list-group">
+            <div  id="sidemenu" class="list-group">
                 <a href="index.html" class="list-group-item">Home</a>
                 <a href="about.html" class="list-group-item">About</a>
                 <a href="samples.html" class="list-group-item">Samples</a>
@@ -85,16 +95,17 @@
         </div>
         <div class="col-md-9">
             <ol class="breadcrumb">
-                <li class="active">About</li>
+                <li><a href="samples.html">Samples</a></li>
+                <li class="active">WebComponent Sample</li>
             </ol>
-            <h1>About</h1>
-            <a href="credits.html" class="list-group-item">Credits</a>
-            <a href="walkthrough.html" class="list-group-item">Walkthrough</a>
-            <a href="contentmap.html" class="list-group-item">Content Map</a>
-            <a href="wireframe.html" class="list-group-item">Wireframe</a>
+            <div  class="list-group">
+                <a is="pushstate-anchor" href="page1" class="list-group-item">Demo WebComponent Page1</a>
+                <a is="pushstate-anchor" href="page2" class="list-group-item">Demo WebComponent Page2</a>
+                <a is="pushstate-anchor" href="page3" class="list-group-item">Demo WebComponent Page3</a>
+            </div>
+            <div id="content">
+            </div>
         </div>
-
-
     </div>
 
 </div>
