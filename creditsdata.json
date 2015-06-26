@@ -8,32 +8,32 @@
 }
 ,
 {
-"item": "Audio", "url": "https://www.pond5.com/stock-music/45504097/chopin-etude-no-11-e-flat-major.html", "license": "Public Domain", "additionalInfo":""
+"item": "Audio", "url": "https://www.pond5.com/stock-music/45504097/chopin-etude-no-11-e-flat-major.html", "license": "Public Domain", "additionalInfo":"Audio was used in the samples page"
 }
 ,
 {
-"item": "Video", "url":"https://www.pond5.com/stock-footage/44546959/discovery-launches-mission-sts-124.html", "license": "Public Domain", "additionalInfo": "Discovery Launches Mission"},
+"item": "Video", "url":"https://www.pond5.com/stock-footage/44546959/discovery-launches-mission-sts-124.html", "license": "Public Domain", "additionalInfo": "Discovery Launches Mission - Video was used in the samples page."},
 {
-"item": "Image", "url": "https://www.flickr.com/photos/publicresourceorg/8019990311/in/album-72157631612620404/", "license": "Public Domain", "additionalInfo": "Holding Poop"},
-{"item": "Image", "url": "https://www.flickr.com/photos/publicresourceorg/8019990209/in/album-72157631612620404/", "license":"Public Domain", "additionalInfo": "Fake Laser Guns"
+"item": "Image", "url": "https://www.flickr.com/photos/publicresourceorg/8019990311/in/album-72157631612620404/", "license": "Public Domain", "additionalInfo": "Used in the carousel - Holding Poop"},
+{"item": "Image", "url": "https://www.flickr.com/photos/publicresourceorg/8019990209/in/album-72157631612620404/", "license":"Public Domain", "additionalInfo": "Used in the carousel - Fake Laser Guns"
 }
 ,
 {
-"item":"Image", "url": "https://www.flickr.com/photos/publicresourceorg/8019995300/in/album-72157631612620404/", "license": "Public Domain", "additionalInfo": "Fish Photo"},
-{"item": "Image", "url": "https://www.flickr.com/photos/publicresourceorg/8019998274/in/album-72157631612620404/", "license": "Public Domain", "additionalInfo":"USS Enterprise"
+"item":"Image", "url": "https://www.flickr.com/photos/publicresourceorg/8019995300/in/album-72157631612620404/", "license": "Public Domain", "additionalInfo": "Used as header of item - Fish Photo"},
+{"item": "Image", "url": "https://www.flickr.com/photos/publicresourceorg/8019998274/in/album-72157631612620404/", "license": "Public Domain", "additionalInfo":"Used as header of item - USS Enterprise"
 }
 ,
 {
-"item": "Image", "url":"https://www.flickr.com/photos/publicresourceorg/", "license": "CC", "additionalInfo": "SI Neg. 78-1385. Date: 1978...Center slice of nautilus shell. ..Credit: Dane A. Penland (Smithsonian Institution)"},
+"item": "Image", "url":"https://www.flickr.com/photos/publicresourceorg/", "license": "CC", "additionalInfo": "Used as header of item - SI Neg. 78-1385. Date: 1978...Center slice of nautilus shell. ..Credit: Dane A. Penland (Smithsonian Institution)"},
 {
-"item": "Image", "url": "https://www.flickr.com/photos/publicresourceorg/", "license": "CC", "additionalInfo": "SI Neg. 2003-3753. Date: na...Alan Bean's pressure helmet, back...Credit: Eric Long (Smithsonian Institution)"},
-{"item": "Image", "url": "https://www.flickr.com/photos/publicresourceorg/", "license":"CC", "additionalInfo": "SI Neg. 2003-10548. Date: na...Side view of Whittle's Power Jet, Turbojet...Credit: unknown (Smithsonian Institution)"
+"item": "Image", "url": "https://www.flickr.com/photos/publicresourceorg/", "license": "CC", "additionalInfo": "Used as header of item - SI Neg. 2003-3753. Date: na...Alan Bean's pressure helmet, back...Credit: Eric Long (Smithsonian Institution)"},
+{"item": "Image", "url": "https://www.flickr.com/photos/publicresourceorg/", "license":"CC", "additionalInfo": "Used in the carousel - SI Neg. 2003-10548. Date: na...Side view of Whittle's Power Jet, Turbojet...Credit: unknown (Smithsonian Institution)"
 }
 ,
 {
-"item":"Image", "url": "https://www.flickr.com/photos/publicresourceorg/", "license": "CC", "additionalInfo": "SI Neg. 2003-5003. Date: na...The Conestoga Launch Vehicle taking off...Credit: unknown (Smithsonian Institution)"
+"item":"Image", "url": "https://www.flickr.com/photos/publicresourceorg/", "license": "CC", "additionalInfo": "Used as header of item - SI Neg. 2003-5003. Date: na...The Conestoga Launch Vehicle taking off...Credit: unknown (Smithsonian Institution)"
 },
 {
-  "item":"Image", "url": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin#/media/File:Fr%C3%A9d%C3%A9ric_Chopin_by_Bisson,_1849.png", "license": "Public Domain", "additionalInfo": "The only known photograph of Frederic Chopin"
+  "item":"Image", "url": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin#/media/File:Fr%C3%A9d%C3%A9ric_Chopin_by_Bisson,_1849.png", "license": "Public Domain", "additionalInfo": "Used as header for audio - The only known photograph of Frederic Chopin"
 }
 ]

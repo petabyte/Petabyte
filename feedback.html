@@ -19,13 +19,16 @@
     <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/tipsy.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet" type="text/css">
+    <link href="http://cdn.datatables.net/1.10.7/css/jquery.dataTables.css" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet">
-    <script src="js/lib/jquery.min.js"></script>
+    <script  src="js/lib/jquery.min.js"></script>
+    <script  src="js/lib/jquery.tipsy.js"></script>
     <script src="js/lib/bootstrap.min.js"></script>
     <script src="js/app/main.js"></script>
-    <script src="js/app/contact.js"></script>
+    <script src="js/app/feedback.js"></script>
+    <script src="http://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -44,8 +47,7 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -81,64 +83,38 @@
     <div class="row">
 
         <div class="col-md-3">
-            <div id="sidemenu" class="list-group">
+            <div  id="sidemenu" class="list-group">
                 <a href="index.html" class="list-group-item">Home</a>
                 <a href="about.html" class="list-group-item">About</a>
                 <a href="samples.html" class="list-group-item">Samples</a>
                 <a href="contact.html" class="list-group-item">Contact</a>
             </div>
         </div>
-        <div class="col-md-2">
-            <img src="img/george.png" alt="samples" class="img-responsive img-rounded">
-        </div>
-
-        <div class="col-md-6">
-            <h3>George Sanchez</h3>
-            <h4>petabyte.gs@gmail.com</h4>
-
-            <p>Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus. Curabitur non nulla sit amet nisl
-                tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada. Donec rutrum congue leo eget
-                malesuada. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa, convallis a pellentesque
-                nec, egestas non nisi. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta
-                dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna justo, lacinia eget
-                consectetur sed, convallis at tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-                arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Vivamus
-                suscipit tortor eget felis porttitor volutpat. Vivamus magna justo, lacinia eget consectetur sed,
-                convallis at tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur aliquet
-                quam id dui posuere blandit. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus.</p>
-        </div>
-
-    </div>
-    <div class="row">
-        <div class="col-md-3"></div>
         <div class="col-md-9">
-            <div id="feedbackAlert" class="alert alert-success collapse">
-                <a href="#" class="close" data-dismiss="alert">&times;</a>
-                <strong>Success!</strong> Your feedback has been sent successfully.
-            </div>
-            <form role="form">
-                <div class="form-group">
-                <label for="name">Name:</label>
-                <input id="name"  class="form-control" type="text" autofocus required/>
-                </div>
-                <div class="form-group">
-                <label for="email">Email:</label>
-                <input id="email" class="form-control" type="email" required/>
-                </div>
-                <div class="form-group">
-                <label for="comment">Comment:</label>
-                <textarea id="comment" class="form-control" rows="10"></textarea>
-                </div>
-                <button class="btn btn-default">Submit</button>
-            </form>
-
-            <br />
-            <div>
-            <a href="feedback.html" class="list-group-item">Look at Site Feedback - Click Here!</a>
+            <ol class="breadcrumb">
+                <li><a href="contact.html">Contact</a></li>
+                <li class="active">FeedBack</li>
+            </ol>
+            <h1>Feedback</h1>
+            <div class="col-md-12">
+                <table id ="feedback" class="display" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Comment</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Comment</th>
+                    </tr>
+                    </tfoot>
+                </table>
             </div>
         </div>
-
     </div>
 </div>
 <!-- /.container -->
