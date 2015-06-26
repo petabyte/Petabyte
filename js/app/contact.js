@@ -9,7 +9,7 @@ $(document).ready(function(){
         var $email = $("#email");
         var $comment = $("#comment");
         var $alert = $("#feedbackAlert");
-        var feedback = new Object();
+        var feedback = {};
         feedback.name = $name.val();
         feedback.email = $email.val();
         feedback.comment = $comment.val();

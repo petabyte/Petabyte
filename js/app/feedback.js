@@ -3,7 +3,7 @@
  */
 $(document).ready(function()
 {
-    $.getJSON("./feedback.json")
+    $.getJSON("./feedbackdata.json")
         .done(function(data){
             var feedbackData = $.parseJSON(JSON.stringify(data));
             addToList(feedbackData);
