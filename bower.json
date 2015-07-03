@@ -19,6 +19,7 @@
     "webcomponentsjs": "~0.7.5",
     "app-router": "~2.6.1",
     "polymer": "~1.0.4",
-    "pushstate-anchor": "~0.3.2"
+    "pushstate-anchor": "~0.3.2",
+    "jquery-ui-map": "~3.0.1"
   }
 }

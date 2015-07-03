@@ -84,23 +84,29 @@
                 <a href="contact.html" class="list-group-item">Contact</a>
             </div>
         </div>
+
+
         <div class="col-md-9">
             <ol class="breadcrumb">
-                <li credits="active">Samples</li>
+                <li><a href="samples.html">Samples</a></li>
+                <li class="active">Todo</li>
             </ol>
-            <h1>Samples</h1>
-            <a href="visualization.html" class="list-group-item">Solar System Visualization using SVG</a>
-            <a href="canvas.html" class="list-group-item">Solar System Animation using Canvas</a>
-            <a href="weather.html" class="list-group-item">Weather (Using 3rd party API)</a>
-            <a href="todo.php" class="list-group-item">Todo</a>
-            <a href="webcomponent.html" class="list-group-item">Web Component Sample</a>
-            <a href="video.html" class="list-group-item">Discovery Launch Video</a>
-            <a href="audio.html" class="list-group-item">Chopin Etude No.11 E flat major</a>
+
         </div>
 
-
+        <div class="col-md-9">
+            <h1>To do list generated from db/todo.db</h1>
+            <ol id="todolist">
+                <?php
+                $db = new SQLite3("db/todo.db");
+                $result = $db->query("select * from todo");
+                while($row=$result->fetchArray()){
+                    echo "<li data-id=".$row["id"].">".$row["todo_item"]."</li>";
+                }
+                ?>
+            </ol>
+        </div>
     </div>
-
 </div>
 
 <!-- /.container -->

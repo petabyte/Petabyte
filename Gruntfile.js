@@ -111,6 +111,7 @@ module.exports = function(grunt){
           {expand:true, src:['./css/**'],dest:'./dist'},
           {expand:true, src:['./img/**'],dest:'./dist'},
           {expand:true, src:['./video/**'],dest:'./dist'},
+          {expand:true, src:['./db/**'],dest:'./dist'},
           {expand:true, src:['./audio/**'],dest:'./dist'}
         ]
       }
