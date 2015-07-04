@@ -24,7 +24,7 @@
     <script  src="js/lib/jquery.min.js"></script>
     <script src="js/lib/bootstrap.min.js"></script>
     <script  src="js/app/main.js"></script>
-    <script  src="js/app/jqueryStorage.js"></script>
+    <script  src="js/app/credits.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,38 +44,25 @@
         <?php include 'sidemenu.php'?>
         <div class="col-md-9">
             <ol class="breadcrumb">
-                <li><a href="samples.php">Samples</a></li>
-                <li class="active">Todo</li>
+                <li><a href="about.php">About</a></li>
+                <li credits="active">Credits</li>
             </ol>
-
+            <h1>Credits</h1>
+            <div class="col-md-9">
+                <ol id ="credits" type="1">
+                </ol>
+            </div>
         </div>
 
-        <div class="col-md-9">
-            <h1>Using PHP Generated To Do list from SQLiteDB db/todo.db</h1>
-            <input type="text" id="todo" class="form-control" autofocus/><br />
-            <button id="addBtn" class="btn btn-default">Add Item</button>
-            <button id="removeBtn" class="btn btn-default">Remove All Done Items</button>
-            <ol id="todolist">
-                <?php
-                $db = new SQLite3("db/todo.db");
-                $result = $db->query("select item_number, todo_item from todo");
-                while($row=$result->fetchArray()){
-                    echo "<li data-id=".$row["item_number"].">".$row["todo_item"]."</li>";
-                }
-                ?>
-            </ol>
-        </div>
+
     </div>
+
 </div>
-
 <!-- /.container -->
-
 <div class="container">
     <hr>
     <?php include 'footer.php'?>
 </div>
 <!-- /.container -->
-
 </body>
-
 </html>

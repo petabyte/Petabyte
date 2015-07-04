@@ -30,7 +30,7 @@ $(document).ready(function()
         if(currentFileNameHref){
             currentFileName = currentFileNameHref.split("/").pop();
             if(currentFileName === ""){
-                currentFileName = "index.html";
+                currentFileName = "index.php";
             }
         }
         if(parentFileNameHref){

@@ -38,56 +38,12 @@
 </head>
 
 <body>
-
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><i class="fa fa-rocket fa-lg"></i> GAS</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse topnavbar" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="index.html"><i class="fa fa-circle-o fa-lg"></i> Home</a>
-                </li>
-                <li>
-                    <a href="about.html"><i class="fa fa-circle-o fa-lg"></i> About</a>
-                </li>
-                <li>
-                    <a href="samples.html"><i class="fa fa-circle-o fa-lg"></i> Samples</a>
-                </li>
-                <li>
-                    <a href="contact.html"><i class="fa fa-circle-o fa-lg"></i> Contact</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-
+<?php include 'nav.php'?>
 <!-- Page Content -->
 <div class="container">
 
     <div class="row">
-
-        <div class="col-md-3">
-            <div id="sidemenu" class="list-group">
-                <a href="index.html" class="list-group-item">Home</a>
-                <a href="about.html" class="list-group-item">About</a>
-                <a href="samples.html" class="list-group-item">Samples</a>
-                <a href="contact.html" class="list-group-item">Contact</a>
-            </div>
-        </div>
+        <?php include 'sidemenu.php'?>
         <div class="col-md-2">
             <img src="img/george.png" alt="samples" class="img-responsive img-rounded">
         </div>
@@ -114,7 +70,7 @@
         <div class="col-md-3"></div>
         <div class="col-md-9">
             <div>
-                <a href="feedback.html" class="list-group-item">Look at Feedback - Click Here!</a>
+                <a href="feedback.php" class="list-group-item">Look at Feedback - Click Here!</a>
             </div>
             <br />
             <div id="feedbackAlert" class="alert alert-success collapse">
@@ -123,16 +79,16 @@
             </div>
             <form role="form">
                 <div class="form-group">
-                <label for="name">Name:</label>
-                <input id="name"  class="form-control" type="text" autofocus required/>
+                    <label for="name">Name:</label>
+                    <input id="name"  class="form-control" type="text" autofocus required/>
                 </div>
                 <div class="form-group">
-                <label for="email">Email:</label>
-                <input id="email" class="form-control" type="email" required/>
+                    <label for="email">Email:</label>
+                    <input id="email" class="form-control" type="email" required/>
                 </div>
                 <div class="form-group">
-                <label for="comment">Comment:</label>
-                <textarea id="comment" class="form-control" rows="10"></textarea>
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" class="form-control" rows="10"></textarea>
                 </div>
                 <button class="btn btn-default">Submit</button>
             </form>
@@ -143,18 +99,8 @@
 <!-- /.container -->
 
 <div class="container">
-
     <hr>
-
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; George Sanchez 2014</p>
-            </div>
-        </div>
-    </footer>
-
+    <?php include 'footer.php'?>
 </div>
 <!-- /.container -->
 

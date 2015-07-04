@@ -24,7 +24,6 @@
     <script  src="js/lib/jquery.min.js"></script>
     <script src="js/lib/bootstrap.min.js"></script>
     <script  src="js/app/main.js"></script>
-    <script  src="js/app/jqueryStorage.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,33 +38,27 @@
 <?php include 'nav.php'?>
 <!-- Page Content -->
 <div class="container">
-
     <div class="row">
         <?php include 'sidemenu.php'?>
         <div class="col-md-9">
             <ol class="breadcrumb">
                 <li><a href="samples.php">Samples</a></li>
-                <li class="active">Todo</li>
+                <li class="active">Discovery Launch Video</li>
             </ol>
-
+            <h1>Video</h1>
+            <h3>Discovery Launch</h3>
+            <div class="embed-responsive embed-responsive-16by9 ">
+                <video class="embed-responsive-item" controls="controls" poster="img/discoverylaunch.jpg" title="Discovery Launch">
+                    <source src="video/discoverylaunch.m4v" type="video/mp4" />
+                    <source src="video/discoverylaunch.webm" type="video/webm" />
+                    <source src="video/discoverylaunch.ogv" type="video/ogg" />
+                </video>
+            </div>
         </div>
 
-        <div class="col-md-9">
-            <h1>Using PHP Generated To Do list from SQLiteDB db/todo.db</h1>
-            <input type="text" id="todo" class="form-control" autofocus/><br />
-            <button id="addBtn" class="btn btn-default">Add Item</button>
-            <button id="removeBtn" class="btn btn-default">Remove All Done Items</button>
-            <ol id="todolist">
-                <?php
-                $db = new SQLite3("db/todo.db");
-                $result = $db->query("select item_number, todo_item from todo");
-                while($row=$result->fetchArray()){
-                    echo "<li data-id=".$row["item_number"].">".$row["todo_item"]."</li>";
-                }
-                ?>
-            </ol>
-        </div>
+
     </div>
+
 </div>
 
 <!-- /.container -->

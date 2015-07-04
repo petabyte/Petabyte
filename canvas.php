@@ -17,14 +17,16 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/tipsy.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
     <link href="css/main.css" rel="stylesheet">
     <script  src="js/lib/jquery.min.js"></script>
+    <script  src="js/lib/jquery.csv.min.js"></script>
     <script src="js/lib/bootstrap.min.js"></script>
-    <script  src="js/app/main.js"></script>
-    <script  src="js/app/jqueryStorage.js"></script>
+    <script src="js/app/main.js"></script>
+    <script src="js/app/planetAnimation.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,35 +41,19 @@
 <?php include 'nav.php'?>
 <!-- Page Content -->
 <div class="container">
-
     <div class="row">
         <?php include 'sidemenu.php'?>
         <div class="col-md-9">
             <ol class="breadcrumb">
                 <li><a href="samples.php">Samples</a></li>
-                <li class="active">Todo</li>
+                <li class="active">Solar System Animation using Canvas</li>
             </ol>
-
-        </div>
-
-        <div class="col-md-9">
-            <h1>Using PHP Generated To Do list from SQLiteDB db/todo.db</h1>
-            <input type="text" id="todo" class="form-control" autofocus/><br />
-            <button id="addBtn" class="btn btn-default">Add Item</button>
-            <button id="removeBtn" class="btn btn-default">Remove All Done Items</button>
-            <ol id="todolist">
-                <?php
-                $db = new SQLite3("db/todo.db");
-                $result = $db->query("select item_number, todo_item from todo");
-                while($row=$result->fetchArray()){
-                    echo "<li data-id=".$row["item_number"].">".$row["todo_item"]."</li>";
-                }
-                ?>
-            </ol>
+            <h1>Solar System Animation</h1>
+            <h3>(Not to scale, movement not precise)</h3>
+            <canvas id="scene" width="1500" height="1500" class="col-md-9"></canvas>
         </div>
     </div>
 </div>
-
 <!-- /.container -->
 
 <div class="container">
