@@ -45,7 +45,7 @@
         <div class="col-md-9">
             <ol class="breadcrumb">
                 <li><a href="about.php">About</a></li>
-                <li credits="active">Credits</li>
+                <li class="active">Credits</li>
             </ol>
             <h1>Credits</h1>
             <div class="col-md-9">

@@ -45,7 +45,7 @@
         <div class="col-md-9">
             <ol class="breadcrumb">
                 <li><a href="about.php">About</a></li>
-                <li credits="active">Wire Frame</li>
+                <li class="active">Wire Frame</li>
             </ol>
             <h1>Wire Frame PDF Document</h1>
             <div class="embed-container">

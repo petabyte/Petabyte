@@ -44,7 +44,7 @@
         <div class="col-md-9">
             <ol class="breadcrumb">
                 <li><a href="about.php">About</a></li>
-                <li credits="active">Content Map</li>
+                <li class="active">Content Map</li>
             </ol>
             <h1>Content Map</h1>
             <img src="img/contentmap.png" class="img-responsive"/>

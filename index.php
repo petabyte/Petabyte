@@ -87,7 +87,7 @@
                         <img src="img/home.png" alt="home">
                         <div class="caption">
                             <h4 class="pull-right"><i class="fa fa-rocket fa-lg"></i></h4>
-                            <h4><a href="index.html">Home</a>
+                            <h4><a href="index.php">Home</a>
                             </h4>
                             <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
                         </div>
@@ -100,7 +100,7 @@
                         <img src="img/about.png" alt="about">
                         <div class="caption">
                             <h4 class="pull-right"><i class="fa fa-star fa-lg"></i></h4>
-                            <h4><a href="about.html">About</a>
+                            <h4><a href="about.php">About</a>
                             </h4>
                             <p>Donec rutrum congue leo eget malesuada. Sed porttitor lectus nibh. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
                         </div>
@@ -111,7 +111,7 @@
                         <img src="img/samples.png" alt="samples">
                         <div class="caption">
                             <h4 class="pull-right"><i class="fa fa-thumbs-up fa-lg"></i></h4>
-                            <h4><a href="samples.html">Samples</a>
+                            <h4><a href="samples.php">Samples</a>
                             </h4>
                             <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit.</p>
                         </div>
@@ -123,7 +123,7 @@
                         <img src="img/contact.png" alt="contact">
                         <div class="caption">
                             <h4 class="pull-right"><i class="fa fa-phone-square fa-lg"></i></h4>
-                            <h4><a href="contact.html">Contact</a>
+                            <h4><a href="contact.php">Contact</a>
                             </h4>
                             <p>Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>

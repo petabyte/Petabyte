@@ -50,31 +50,32 @@
             <div class="col-md-9">
                 <p>Technology and approached used:</p>
                 <ol type="1">
-                    <li>Content Map - <a href="contentmap.html">Content Map</a> </li>
-                    <li>Wireframe - <a href="wireframe.html">Wire Frame</a> </li>
+                    <li>Content Map - <a href="contentmap.php">Content Map</a> </li>
+                    <li>Wireframe - <a href="wireframe.php">Wire Frame</a> </li>
                     <li>HTML5 - used in every page</li>
                     <li>CSS Layout Bootstrap - used a template and have responsiveness out of the box</li>
                     <li>Home, About, Samples, Contact - top level sections</li>
-                    <li>Glyphs, icons - Used in the Home page, <a href="index.html">Home page</a></li>
-                    <li>Video Element -  <a href="video.html">Video</a></li>
-                    <li>Audio Element -  <a href="audio.html">Audio</a></li>
-                    <li>Slideshow -  <a href="index.html">Slideshow</a></li>
+                    <li>Create and include a unique favicon <a href="img/favicon.ico">favicon</a></li>
+                    <li>Glyphs, icons - Used in the Home page, <a href="index.php">Home page</a></li>
+                    <li>Video Element -  <a href="video.php">Video</a></li>
+                    <li>Audio Element -  <a href="audio.php">Audio</a></li>
+                    <li>Slideshow -  <a href="index.php">Slideshow</a></li>
                     <li>This is a web font-  <h4>Sample font</h4></li>
-                    <li>Canvas Element -  <a href="canvas.html">Canvas - planets.csv</a></li>
-                    <li>HTML 5 - input validation  <a href="contact.html">Name and Email is required</a></li>
-                    <li>JSON Data interchange  <a href="credits.html">Credits</a>,<a href="weather.html">Third Party APi</a></li>
-                    <li>Server side persistent storage  <a href="feedback.html">Feedback stored as JSON</a>,<a href="todo.php">To do</a></li>
-                    <li>Visualization  <a href="visualization.html">Visualization - planets.csv</a></li>
-                    <li>Asynchronous updates -  <a href="weather.html">Weather</a>,<a href="webcomponent.html">Web Component</a></li>
+                    <li>Canvas Element -  <a href="canvas.php">Canvas - planets.csv</a></li>
+                    <li>HTML 5 - input validation  <a href="contact.php">Name and Email is required</a></li>
+                    <li>JSON Data interchange  <a href="credits.php">Credits</a>,<a href="weather.php">Third Party APi</a></li>
+                    <li>Server side persistent storage  <a href="feedback.php">Feedback stored as JSON</a>,<a href="todo.php">To do</a></li>
+                    <li>Visualization  <a href="visualization.php">Visualization - planets.csv</a></li>
+                    <li>Asynchronous updates -  <a href="weather.php">Weather</a>,<a href="webcomponent.php">Web Component</a></li>
                     <li>Client side scripting - jQuery - Used jquery</li>
                     <li>Server side scripting - <a href="feedback_json.php">Server side php</a>,<a href="todo.php">To do</a></li>
-                    <li>Credits - Using json (credits.json) file to render all credits - <a href="credits.html">Credits</a></li>
-                    <li>This is the walkthrough can be found in about - <a href="about.html">About</a></li>
+                    <li>Credits - Using json (credits.json) file to render all credits - <a href="credits.php">Credits</a></li>
+                    <li>This is the walkthrough can be found in about - <a href="about.php">About</a></li>
 
 
                     <li>Extra - Weather - Using a third party API openweathermap.com and HTML Geo Location</li>
-                    <li>Extra - Web Components - Using polymer - <a href="webcomponent.html">Web Component</a></li>
-                    <li>Extra - CDN jQuery DataTables - <a href="feedback.html">Feedback</a></li>
+                    <li>Extra - Web Components - Using polymer - <a href="webcomponent.php">Web Component</a></li>
+                    <li>Extra - CDN jQuery DataTables - <a href="feedback.php">Feedback</a></li>
                     <li>Extra - used jshint</li>
                     <li>Extra - used grunt as the build tool</li>
 
