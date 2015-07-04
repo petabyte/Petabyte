@@ -9,6 +9,16 @@ body {
     background-color: #F7F3E9;
 }
 
+.strikeout{
+    color:#AA0000;
+    text-decoration: line-through;
+}
+
+li[data-id]:first-child{
+    font-weight: bold;
+    color:#AA0000;
+}
+
 h1,h2,h3,h4{
     font-family: 'Nova Square', cursive;
 }
