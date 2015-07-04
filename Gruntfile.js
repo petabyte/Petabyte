@@ -6,6 +6,7 @@ module.exports = function(grunt){
   grunt.loadNpmTasks("grunt-bowercopy");
   grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks("grunt-contrib-clean");
+  grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.initConfig({
   	pkg:grunt.file.readJSON("package.json"),
   	/**
@@ -34,6 +35,24 @@ module.exports = function(grunt){
     **/
     watch:{
     	js:{files:["js/*.js","!Grunt*.js","test/*spec.js"],tasks:["jshint", "jasmine_node"]}
+    },
+
+    uglify: {
+      options:{
+        compress:true
+      },
+      appjs: {
+        files: {
+          './dist/js/app/contact.js': ['js/app/contact.js'],
+          './dist/js/app/credits.js': ['js/app/credits.js'],
+          './dist/js/app/feedback.js': ['js/app/feedback.js'],
+          './dist/js/app/jqueryStorage.js': ['js/app/jqueryStorage.js'],
+          './dist/js/app/main.js': ['js/app/main.js'],
+          './dist/js/app/planetAnimation.js': ['js/app/planetAnimation.js'],
+          './dist/js/app/planetVisualization.js': ['js/app/planetVisualization.js'],
+          './dist/js/app/weather.js': ['js/app/weather.js']
+        }
+      }
     },
 
     /**
@@ -78,6 +97,12 @@ module.exports = function(grunt){
           '':'webcomponentsjs/*min*.js'
         }
       },
+      libsRequireJs:{
+        options:{ destPrefix:'js/lib'},
+        files:{
+          '':'requirejs/*.js'
+        }
+      },
       libsAppRouter:{
         options:{ destPrefix:'webcomponent'},
         files:{
@@ -103,11 +128,11 @@ module.exports = function(grunt){
           {expand:true, src:['./*.html'],dest:'./dist'},
           {expand:true, src:['./*.php'],dest:'./dist'},
           {expand:true, src:['./*.csv'],dest:'./dist'},
+          {expand:true, src:['./js/lib/**'],dest:'./dist'},
           {expand:true, src:['./*data*.json'],dest:'./dist'},
           {expand:true, src:['./*.pdf'],dest:'./dist'},
           {expand:true, src:['./webcomponent/**'],dest:'./dist'},
           {expand:true, src:['./mywebcomponents/**'],dest:'./dist'},
-          {expand:true, src:['./js/**'],dest:'./dist'},
           {expand:true, src:['./css/**'],dest:'./dist'},
           {expand:true, src:['./img/**'],dest:'./dist'},
           {expand:true, src:['./video/**'],dest:'./dist'},
@@ -131,6 +156,6 @@ module.exports = function(grunt){
      "bowercopy:libsPolymer",
      "bowercopy:libsPushStateAnchor",
      "watch"]);
-   grunt.registerTask("dist",["jshint","clean:dist","copy:dist"]);
+   grunt.registerTask("dist",["jshint","clean:dist","copy:dist","uglify:appjs"]);
 }
   
