@@ -23,8 +23,19 @@ $(document).ready(function()
     };
 
     var setLocationNav = function(location){
-        var currentFileName = $(location).attr("href").split("/").pop();
-        var parentFileName = $linkBreadCrumb.find("[href]").attr("href").split("/").pop();
+        var currentFileName = null;
+        var parentFileName = null;
+        var currentFileNameHref = $(location).attr("href");
+        var parentFileNameHref = $linkBreadCrumb.find("[href]").attr("href");
+        if(currentFileNameHref){
+            currentFileName = currentFileNameHref.split("/").pop();
+            if(currentFileName === ""){
+                currentFileName = "index.html";
+            }
+        }
+        if(parentFileNameHref){
+            parentFileName = parentFileNameHref.split("/").pop();
+        }
         var $currentTopNav = $linkNavigation.filter("[href=\""+currentFileName+"\"]");
         var $currentSideMenu = $linkSideMenu.filter("[href=\""+currentFileName+"\"]");
         var $parentTopNav = $linkNavigation.filter("[href=\""+parentFileName+"\"]");
