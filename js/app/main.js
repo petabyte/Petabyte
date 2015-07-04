@@ -22,15 +22,35 @@ $(document).ready(function()
         element.addClass("active");
     };
 
+    var setLocationNav = function(location){
+        var currentFileName = $(location).attr("href").split("/").pop();
+        var parentFileName = $linkBreadCrumb.find("[href]").attr("href").split("/").pop();
+        var $currentTopNav = $linkNavigation.filter("[href=\""+currentFileName+"\"]");
+        var $currentSideMenu = $linkSideMenu.filter("[href=\""+currentFileName+"\"]");
+        var $parentTopNav = $linkNavigation.filter("[href=\""+parentFileName+"\"]");
+        var $parentSideMenu = $linkSideMenu.filter("[href=\""+parentFileName+"\"]");
+        if($currentTopNav.length > 0 && $currentSideMenu.length > 0){
+            setLastLocationTopNav($currentTopNav);
+            setLastLocationSideMenu($currentSideMenu);
+        }else{
+            setLastLocationTopNav($parentTopNav);
+            setLastLocationSideMenu($parentSideMenu);
+        }
+    };
+
+    var $currentLocation =$("<a>",{href:$(location).attr("href")})[0];
+    var $breadCrumbParentLocation = $linkBreadCrumb.find("[href=\""+lastLocation+"\"]");
     if (lastLocation){
-        var currentLocation =$("<a>",{href:$(location).attr("href")})[0];
-        var breadCrumbParentLocation = $linkBreadCrumb.find("[href=\""+lastLocation+"\"]");
-        if(currentLocation.pathname.indexOf(lastLocation) !== -1 || breadCrumbParentLocation.length !== 0){
+        if($currentLocation.pathname.indexOf(lastLocation) !== -1 || $breadCrumbParentLocation.length !== 0){
             var $currentTopNav = $linkNavigation.filter("[href=\""+lastLocation+"\"]");
             var $currentSideMenu = $linkSideMenu.filter("[href=\""+lastLocation+"\"]");
             setLastLocationTopNav($currentTopNav);
             setLastLocationSideMenu($currentSideMenu);
+        }else{
+            setLocationNav($currentLocation, $breadCrumbParentLocation);
         }
+    }else{
+        setLocationNav($currentLocation, $breadCrumbParentLocation);
     }
 
 
