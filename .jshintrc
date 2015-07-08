@@ -96,6 +96,7 @@
         "window"      :true,
         "d3"      :true,
         "navigator"      :true,
-        "self"      :true
+        "self"      :true,
+        "setInterval": true
     }
 }

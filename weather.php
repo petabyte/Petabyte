@@ -54,10 +54,9 @@
 
         <div class="col-md-9">
             <label for="whichcity">Where are you at ? (City)</label>
-            <input id="whichcity" type="text" class="input-block-level" />
-        </div>
-        <div class="col-md-9">
-            <button id="button1" class="btn">
+            <input id="whichcity" type="text" class="form-control"/>
+            <br/>
+            <button id="button1" class="btn btn-default">
                 How's the Weather?
                 <i class="fa"></i>
             </button>

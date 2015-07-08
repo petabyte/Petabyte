@@ -24,6 +24,8 @@
     <script  src="js/lib/jquery.min.js"></script>
     <script src="js/lib/bootstrap.min.js"></script>
     <script  src="js/app/main.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script  src="js/app/giphy.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,22 +45,28 @@
         <?php include 'sidemenu.php'?>
         <div class="col-md-9">
             <ol class="breadcrumb">
-                <li credits="active">Samples</li>
+                <li><a href="samples.php">Samples</a></li>
+                <li class="active">Giphy Asynchronous Gif update</li>
             </ol>
-            <h1>Samples</h1>
-            <a href="visualization.php" class="list-group-item">Solar System Visualization using SVG</a>
-            <a href="canvas.php" class="list-group-item">Solar System Animation using Canvas</a>
-            <a href="weather.php" class="list-group-item">Weather (Using 3rd party API)</a>
-            <a href="giphy.php" class="list-group-item">Giphy Asynchronous update (Using 3rd party API)</a>
-            <a href="todo.php" class="list-group-item">Todo</a>
-            <a href="webcomponent.php" class="list-group-item">Web Component Sample</a>
-            <a href="video.php" class="list-group-item">Discovery Launch Video</a>
-            <a href="audio.php" class="list-group-item">Chopin Etude No.11 E flat major</a>
+            <h3>Gif is updated asychronously from giphy.com every 20 seconds</h3>
         </div>
 
-
+        <div class="col-md-9">
+            <div>
+                <h4 id="gifId"></h4>
+                <h4 id="gifUrl"></h4>
+                <img id="giphyGif" class="img-rounded" height="400px" width="500px"/>
+            </div>
+            <br/>
+            <label for="inputCategory">Gif Category</label>
+            <input id="inputCategory" type="text" class="form-control" value="rocket"/>
+            <br />
+            <button id="updateCategory" class="btn btn-default">
+                Search
+                <i class="fa"></i>
+            </button>
+        </div>
     </div>
-
 </div>
 
 <!-- /.container -->

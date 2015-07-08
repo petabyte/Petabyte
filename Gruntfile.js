@@ -50,7 +50,8 @@ module.exports = function(grunt){
           './dist/js/app/main.js': ['js/app/main.js'],
           './dist/js/app/planetAnimation.js': ['js/app/planetAnimation.js'],
           './dist/js/app/planetVisualization.js': ['js/app/planetVisualization.js'],
-          './dist/js/app/weather.js': ['js/app/weather.js']
+          './dist/js/app/weather.js': ['js/app/weather.js'],
+          './dist/js/app/giphy.js': ['js/app/giphy.js']
         }
       }
     },

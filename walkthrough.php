@@ -66,7 +66,7 @@
                     <li>JSON Data interchange  <a href="credits.php">Credits</a>,<a href="weather.php">Third Party APi</a></li>
                     <li>Server side persistent storage  <a href="feedback.php">Feedback stored as JSON</a>,<a href="todo.php">To do</a></li>
                     <li>Visualization  <a href="visualization.php">Visualization - planets.csv</a></li>
-                    <li>Asynchronous updates -  <a href="weather.php">Weather</a>,<a href="webcomponent.php">Web Component</a></li>
+                    <li>Asynchronous updates -  <a href="weather.php">Weather</a>,<a href="webcomponent.php">Web Component</a>,<a href="giphy.php">Giphy Asynchronous update</a></li>
                     <li>Client side scripting - jQuery - Used jquery</li>
                     <li>Server side scripting - <a href="feedback_json.php">Server side php</a>,<a href="todo.php">To do</a></li>
                     <li>Credits - Using json (credits.json) file to render all credits - <a href="credits.php">Credits</a></li>
