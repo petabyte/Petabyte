@@ -48,6 +48,7 @@
             <h1>Samples</h1>
             <a href="visualization.php" class="list-group-item">Solar System Visualization using SVG</a>
             <a href="canvas.php" class="list-group-item">Solar System Animation using Canvas</a>
+            <a href="doppler.php" class="list-group-item">Use microphone to detect motion</a>
             <a href="weather.php" class="list-group-item">Weather (Using 3rd party API)</a>
             <a href="giphy.php" class="list-group-item">Giphy Asynchronous update (Using 3rd party API)</a>
             <a href="todo.php" class="list-group-item">Todo</a>
@@ -55,7 +56,6 @@
             <a href="video.php" class="list-group-item">Discovery Launch Video</a>
             <a href="audio.php" class="list-group-item">Chopin Etude No.11 E flat major</a>
         </div>
-
 
     </div>
 

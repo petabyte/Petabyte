@@ -51,7 +51,8 @@ module.exports = function(grunt){
           './dist/js/app/planetAnimation.js': ['js/app/planetAnimation.js'],
           './dist/js/app/planetVisualization.js': ['js/app/planetVisualization.js'],
           './dist/js/app/weather.js': ['js/app/weather.js'],
-          './dist/js/app/giphy.js': ['js/app/giphy.js']
+          './dist/js/app/giphy.js': ['js/app/giphy.js'],
+          './dist/js/app/dopplerMove.js': ['js/app/dopplerMove.js']
         }
       }
     },
@@ -96,6 +97,12 @@ module.exports = function(grunt){
         options:{ destPrefix:'js/lib'},
         files:{
           '':'awe/**.js'
+        }
+      },
+      libsDoppler:{
+        options:{ destPrefix:'js/lib'},
+        files:{
+          '':'doppler/**.js'
         }
       },
       libsWebComponentsjs:{
@@ -158,6 +165,7 @@ module.exports = function(grunt){
      "bowercopy:libsJQuery",
      "bowercopy:libsJQueryCSV",
      "bowercopy:libsD3",
+     "bowercopy:libsDoppler",
      "bowercopy:libsWebComponentsjs",
      "bowercopy:libsAppRouter",
      "bowercopy:libsPolymer",
