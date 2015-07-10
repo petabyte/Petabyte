@@ -92,6 +92,12 @@ module.exports = function(grunt){
           '':'d3/*min*.js'
         }
       },
+      libsAwe:{
+        options:{ destPrefix:'js/lib'},
+        files:{
+          '':'awe/**.js'
+        }
+      },
       libsWebComponentsjs:{
         options:{ destPrefix:'js/lib'},
         files:{

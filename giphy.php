@@ -48,7 +48,7 @@
                 <li><a href="samples.php">Samples</a></li>
                 <li class="active">Giphy Asynchronous Gif update</li>
             </ol>
-            <h3>Gif is updated asychronously from giphy.com every 20 seconds</h3>
+            <h3>Gif is updated asynchronously from giphy.com every 20 seconds</h3>
         </div>
 
         <div class="col-md-9">

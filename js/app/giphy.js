@@ -27,6 +27,12 @@ $(document).ready(function(){
     $("#updateCategory").on("click",function () {
         getRandomGif($currentCategory.val());
     });
+
+    $currentCategory.keypress(function(event){
+        if ( event.which === 13 ) {
+            getRandomGif($currentCategory.val());
+        }
+    });
     getRandomGif($currentCategory.val());
     setInterval(function(){getRandomGif($currentCategory.val());}, 20000);
 });
