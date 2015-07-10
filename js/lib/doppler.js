@@ -97,7 +97,7 @@ window.doppler = (function() {
 
     // Doppler tone
     osc.frequency.value = freq;
-    osc.type = osc.SINE;
+    osc.type = "sine";
     osc.start(0);
     osc.connect(ctx.destination);
 
