@@ -6,12 +6,12 @@ $(document).ready(function(){
         window.doppler.init(function(bandwidth) {
             var threshold = 4;
             if (bandwidth.left > threshold || bandwidth.right > threshold) {
-                var scale    = 10;
+                var scale    = 25;
                 var baseSize = 360;
                 var diff = bandwidth.left - bandwidth.right;
                 var useValue = (baseSize + scale*diff);
                 $box.animate( {rotation: useValue},
-                    {   duration: 1,
+                    {   duration: 5,
                         step: function(now) {
                             $(this).css({"transform": "rotate("+now+"deg)"});
                         }

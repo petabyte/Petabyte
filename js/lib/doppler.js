@@ -7,7 +7,6 @@ window.doppler = (function() {
 
   var ctx = new AuContext();
   var osc = ctx.createOscillator();
-  var spectrumCanvas = document.getElementById('spectrum');
   // This is just preliminary, we'll actually do a quick scan
   // (as suggested in the paper) to optimize this.
   var freq = 20000;
@@ -19,7 +18,7 @@ window.doppler = (function() {
     var primaryTone = freqToIndex(analyser, freq);
     var primaryVolume = freqs[primaryTone];
     // This ratio is totally empirical (aka trial-and-error).
-    var maxVolumeRatio = 0.001;
+    var maxVolumeRatio = 0.00001;
 
     var leftBandwidth = 0;
     do {
