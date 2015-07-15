@@ -34,7 +34,7 @@
                 <li><a href="samples.php">Samples</a></li>
                 <li class="active">Doppler Motion</li>
             </ol>
-            <h3>Allow browser to user your mic, Now blow!</h3>
+            <h3>Allow browser to use your mic, Now blow!</h3>
         </div>
         <div class="col-md-9">
             <img src="img/pinwheel.png" id="box" />

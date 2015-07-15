@@ -21,6 +21,9 @@ body {
     text-decoration: line-through;
 }
 
+li[data-id] {
+    cursor: pointer;
+}
 li[data-id]:first-child{
     font-weight: bold;
     color:#AA0000;

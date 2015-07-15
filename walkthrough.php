@@ -64,11 +64,11 @@
                     <li>Canvas Element -  <a href="canvas.php">Canvas - planets.csv</a></li>
                     <li>HTML 5 - input validation  <a href="contact.php">Name and Email is required</a></li>
                     <li>JSON Data interchange  <a href="credits.php">Credits</a>,<a href="weather.php">Third Party APi</a></li>
-                    <li>Server side persistent storage  <a href="feedback.php">Feedback stored as JSON</a>,<a href="todo.php">To do</a></li>
+                    <li>Server side persistent storage  <a href="feedback.php">Feedback stored as JSON</a>,<a href="todo.php">To do stored as SQLITE</a></li>
                     <li>Visualization  <a href="visualization.php">Visualization - planets.csv</a></li>
                     <li>Asynchronous updates -  <a href="weather.php">Weather</a>,<a href="webcomponent.php">Web Component</a>,<a href="giphy.php">Giphy Asynchronous update</a></li>
                     <li>Client side scripting - jQuery - Used jquery</li>
-                    <li>Server side scripting - <a href="feedback_json.php">Server side php</a>,<a href="todo.php">To do</a></li>
+                    <li>Server side scripting - Everything is in php <a href="feedback.php">Server side php</a>,<a href="todo.php">To do</a></li>
                     <li>Credits - Using json (credits.json) file to render all credits - <a href="credits.php">Credits</a></li>
                     <li>This is the walkthrough can be found in about - <a href="about.php">About</a></li>
 
@@ -76,6 +76,7 @@
                     <li>Extra - Weather - Using a third party API openweathermap.com and HTML Geo Location</li>
                     <li>Extra - Web Components - Using polymer - <a href="webcomponent.php">Web Component</a></li>
                     <li>Extra - CDN jQuery DataTables - <a href="feedback.php">Feedback</a></li>
+                    <li>Javascript sources are here - <a href="js_src/app">Javascript Sources</a></li>
                     <li>Extra - used jshint</li>
                     <li>Extra - used grunt as the build tool</li>
 

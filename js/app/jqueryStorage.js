@@ -31,6 +31,7 @@ $(document).ready(function(){
             .done(function(){
                 var $todoList = $("#todolist");
                 var $todoNew = $("<li></li>");
+                $todoNew.css("cursor","pointer");
                 $todoNew.append($todoValue.val());
                 $todoNew.on("click", onClickFunction);
                 $todoList.append($todoNew);
